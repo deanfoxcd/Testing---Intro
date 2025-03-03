@@ -18,7 +18,7 @@ test('clicking button shows 6 more products', async () => {
   user.click(button);
 
   await waitFor(async () => {
-    const titles = await screen.findByRole('heading');
+    const titles = await screen.findAllByRole('heading');
     expect(titles).toHaveLength(12);
   });
 });
